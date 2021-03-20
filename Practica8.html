@@ -56,7 +56,7 @@
     <script>
 
         var coordenadas = {
-            lat: -31.563910, lng: 147.154312
+            lat: 19.4978, lng: -99.1269
         }
 
         const queryString = window.location.search;
@@ -72,7 +72,7 @@
 
         var script = document.createElement('script');
 
-        script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAv-m46ebIV9fqkE2fIBGeWunmGmBm2R24&callback=iniciaMapa' + idioma;
+        script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAv-m46ebIV9fqkE2fIBGeWunmGmBm2R24&callback=iniciaMapa&language=' + idioma;
         document.head.appendChild(script);
 
         function iniciaMapa() {
