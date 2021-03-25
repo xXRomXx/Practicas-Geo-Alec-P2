@@ -32,8 +32,21 @@
 
             var styleMapType = new google.maps.StyledMapType([
                 { elementType : 'geometry', stylers : [ { color: '#242F3E' } ] },
-                { elementType : 'labels.text.stroke', stylers : [ { color: '#CA52D5' } ] },
-                { elementType : 'labels.text.fill', stylers : [ { color: '#773D8E' } ] }
+                { elementType : 'labels.text.stroke', stylers : [ { color: '#3C808E' } ] },
+                { elementType : 'labels.text.fill', stylers : [ { color: '#773D8E' } ] },
+                {
+                    featureType : 'poi',
+                    elementType : 'labels.text.fill',
+                    stylers : [{color : '#D59563'}]
+                }
+                {
+                    featureType : 'poi.park',
+                    elementType : 'geometry',
+                    stylers : [{color : '#263C3F'}]
+                }
+
+
+                
             ], { name : 'Mapa oscuro'});
 
             var propiedades = {
