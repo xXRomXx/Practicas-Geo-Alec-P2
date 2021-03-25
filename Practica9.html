@@ -30,18 +30,26 @@
 
         function iniciaMapa(){
 
-            var styleMapType = new google.maps.StyledMapType([], { name : 'Mapa oscuro'});
+            var styleMapType = new google.maps.StyledMapType([
+                { elementType : 'geometry', stylers : [ { color: '#242F3E' } ] },
+                { elementType : 'labels.text.stroke', stylers : [ { color: '#CA52D5' } ] },
+                { elementType : 'labels.text.fill', stylers : [ { color: '#746855' } ] }
+            ], { name : 'Mapa oscuro'});
 
             var propiedades = {
                 center: {
-                    lat: 19.4978, lng: -99.1269
+                    lat: 21.152639, lng: -101.711598
                 },
-                zoom: 14
+                zoom: 14,
+                mapTypeControlOptions: [ 'roadmap', 'satellite', 'hybrid', 'terrain', 'style_map' ]
             };
 
             var mapa = document.getElementById("map");
 
             var map = new google.maps.Map(mapa, propiedades);
+
+            map.mapTypes.set('style_map', styleMapType);
+            map.setMapTypeId('style_map');
 
 
 
