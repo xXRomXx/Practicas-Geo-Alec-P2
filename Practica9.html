@@ -29,6 +29,9 @@
     <script>
 
         function iniciaMapa(){
+
+            var styleMapType = new google.maps.StyledMapType([], { name : 'Mapa oscuro'});
+
             var propiedades = {
                 center: {
                     lat: 19.4978, lng: -99.1269
@@ -40,7 +43,7 @@
 
             var map = new google.maps.Map(mapa, propiedades);
 
-            
+
 
         }
 
