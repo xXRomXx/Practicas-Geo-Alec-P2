@@ -90,6 +90,11 @@
 
             productoslista.appendChild(li);
 
+            borrar.addEventListener("click", (e) => {
+                let id = e.target.parentElement.getAttribute("id");
+                db.collection("productos").doc(id).delete();
+            })
+
         }
 
         formulario.addEventListener('submit', (e) => {
@@ -111,6 +116,12 @@
             changes.forEach(change => {
                 if(change.type == 'added'){
                     renderProductos(change.doc)
+                }
+                else if (change.type = "removed") {
+                    console.log(change.doc.id);
+
+                    let valorid = document.getElementById(change.doc.id);
+                    lista.removeChild(valorid);
                 }
             })
 
